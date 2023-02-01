@@ -132,6 +132,7 @@ a {
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--secondary);
   background: radial-gradient(var(--secondary), var(--tertiary));
   top: 0;
@@ -209,4 +210,30 @@ a {
 .welcome-back .login-btn:hover,
 .hello-friend .login-btn:hover {
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 60px 20px;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 4rem;
+  }
+  .cover {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+  }
+  .cover.left {
+    transform: translateY(-100%);
+  }
+  .welcome-back .login-title,
+  .hello-friend .login-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .welcome-back .login-btn,
+  .hello-friend .login-btn {
+    width: 200px;
+  }
 }
