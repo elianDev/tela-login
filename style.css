@@ -1,8 +1,8 @@
 :root {
   --text: #5e5b5e;
   --primary: #fefefe;
-  --secondary: #7691bf;
-  --tertiary: #516fa3;
+  --secondary: #ff7f51;
+  --tertiary: #ff9b54;
   --background: #faf3fc;
 }
 
@@ -130,12 +130,16 @@ a {
 
 .cover {
   position: absolute;
+  display: flex;
+  align-items: center;
   background: var(--secondary);
-  background: linear-gradient(90deg, var(--secondary) 45%, var(--tertiary) 93%);
+  background: radial-gradient(var(--secondary), var(--tertiary));
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
+  padding: 4rem;
+  box-sizing: border-box;
   z-index: 10;
   transition: 1s all ease;
 }
@@ -155,14 +159,11 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 40%;
-  position: absolute;
-  left: 50px;
-  top: 30%;
   z-index: 20;
   text-align: center;
   color: var(--primary);
   transform: 1s all ease;
+  animation: showUp 1s forwards;
 }
 
 .hello-friend.active {
@@ -171,13 +172,20 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 40%;
-  position: absolute;
-  right: 50px;
-  top: 35%;
-  z-index: 20;
   text-align: center;
   color: var(--primary);
+  animation: showUp 1s forwards;
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .welcome-back .login-title,

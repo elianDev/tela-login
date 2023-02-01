@@ -9,11 +9,9 @@ window.onload = () => {
 const btn = document.querySelectorAll(".login-btn");
 
 const changeScreen = () => {
-  hello.classList.toggle("active");
-  hello.classList.toggle("hide");
-  welcome.classList.toggle("active");
-  welcome.classList.toggle("hide");
   cover.classList.toggle("left");
+  hello.classList.toggle("active");
+  welcome.classList.toggle("active");
 };
 
 btn.forEach((btn) => btn.addEventListener("click", changeScreen));
