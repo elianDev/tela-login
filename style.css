@@ -1,0 +1,204 @@
+:root {
+  --text: #5e5b5e;
+  --primary: #fefefe;
+  --secondary: #7691bf;
+  --tertiary: #516fa3;
+  --background: #faf3fc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  font-family: "Montserrat", arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  background: var(--primary);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.login-title {
+  font-size: 2rem;
+}
+
+.login-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-icons div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #111111;
+  font-size: 1.125rem;
+  padding: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: 0.1s;
+}
+
+.login-icons div a:hover {
+  background: var(--secondary);
+}
+
+.login-data {
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.login-data span {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.login-data input {
+  padding: 0.75rem 1rem;
+  background: #dddd;
+  border: none;
+}
+
+.login-data a {
+  font-weight: 600;
+  color: var(--text);
+  display: inline-block;
+  place-self: center;
+  border-bottom: 1px solid transparent;
+}
+
+.login-data a:hover {
+  border-bottom-color: var(--text);
+}
+
+.login-btn {
+  place-self: center;
+  width: 150px;
+  height: 35px;
+  border: none;
+  text-transform: uppercase;
+  background: var(--tertiary);
+  font-family: "Montserrat", arial, sans-serif;
+  font-weight: 600;
+  color: var(--primary);
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background: var(--secondary);
+}
+
+.cover {
+  position: absolute;
+  background: var(--secondary);
+  background: linear-gradient(90deg, var(--secondary) 45%, var(--tertiary) 93%);
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  transition: 1s all ease;
+}
+
+.cover.left {
+  transform: translateX(-100%);
+}
+
+.welcome-back,
+.hello-friend {
+  display: none;
+}
+
+.welcome-back.active {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  position: absolute;
+  left: 50px;
+  top: 30%;
+  z-index: 20;
+  text-align: center;
+  color: var(--primary);
+  transform: 1s all ease;
+}
+
+.hello-friend.active {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  position: absolute;
+  right: 50px;
+  top: 35%;
+  z-index: 20;
+  text-align: center;
+  color: var(--primary);
+}
+
+.welcome-back .login-title,
+.hello-friend .login-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.welcome-back .login-btn,
+.hello-friend .login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background: transparent;
+  border: 1px solid var(--primary);
+  box-shadow: none;
+  font-weight: 400;
+}
+
+.welcome-back .login-btn:hover,
+.hello-friend .login-btn:hover {
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.6);
+}
